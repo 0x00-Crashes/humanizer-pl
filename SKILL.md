@@ -1,21 +1,24 @@
 ---
 name: humanizer-pl
 description: >
-  Usuwa ślady tekstu generowanego przez AI/LLM z tekstów w języku polskim.
-  Wykrywa i poprawia kalki językowe z angielskiego, polskie GPT-izmy ("w dzisiejszym
-  dynamicznym świecie", "oferta dedykowana", "warto podkreślić"), błędy typograficzne
-  (cudzysłowy "..." zamiast „...", em-dash bez spacji zamiast półpauzy ze spacjami),
-  błędy fleksyjne typowe dla modeli trenowanych na angielskim, oraz uniwersalne wzorce
-  z katalogu Wikipedia "Signs of AI writing".
-  Aktywuj komendą: /humanizer-pl
-  Używaj zawsze, gdy użytkownik wkleja polski tekst do redakcji, mówi "zhumanizuj",
-  "usuń AI", "popraw po AI", "wygładź ten tekst", "to brzmi jak ChatGPT po polsku",
-  albo pracuje nad polskim tekstem akademickim, marketingowym, blogiem, mailem czy
-  jakimkolwiek tekstem, który mógł być wygenerowany lub wsparty przez LLM.
-version: 1.0.0
+  Usuwa ślady tekstu generowanego przez AI/LLM z polskich tekstów, zachowując
+  gatunek źródłowy (akademicki, list, dokumentacja) oraz sens merytoryczny
+  (terminologia, definicje, dane, modalność, kwantyfikatory bez zmian).
+  Wykrywa kalki z angielskiego, polskie GPT-izmy, nadużywanie myślnika
+  jako łącznika składniowego (zdania podrzędne łączone dashami zamiast
+  spójnikami ponieważ/bo/który), błędy typograficzne (cudzysłowy, em-dash
+  vs półpauza), błędy fleksyjne oraz uniwersalne wzorce z Wikipedia
+  "Signs of AI writing". Redakcja kończy się audytem semantycznym.
+  Aktywuj komendą /humanizer-pl. Używaj zawsze, gdy użytkownik wkleja
+  polski tekst do redakcji, mówi "zhumanizuj", "usuń AI", "popraw po AI",
+  "wygładź tekst", "brzmi jak ChatGPT", "za dużo myślników", "usuń dashy",
+  "em-dash overuse", albo pracuje nad polskim tekstem akademickim,
+  marketingowym, blogiem czy mailem, który mógł być wygenerowany przez LLM.
 license: MIT
 compatibility: claude-code opencode
 allowed-tools: Read, Write, Edit, Grep, Glob, AskUserQuestion
+metadata:
+  version: "1.2.0"
 ---
 
 # Humanizer-PL — Usuwanie wzorców AI z polskich tekstów
@@ -35,12 +38,61 @@ Drugi fundament jest dla Ciebie ważniejszy. Polski tekst AI ma własne, dodatko
 
 Gdy otrzymasz tekst do humanizacji:
 
-1. **Zidentyfikuj wzorce AI** — przeskanuj tekst pod kątem wzorców opisanych poniżej, ze szczególnym uwzględnieniem sekcji POLSKA SPECYFIKA
-2. **Przepisz problematyczne fragmenty** — zastąp AI-izmy naturalnymi polskimi alternatywami
-3. **Zachowaj sens** — kluczowe treści muszą pozostać nienaruszone
-4. **Dostosuj rejestr** — formalny, akademicki, swobodny, branżowy — zgodnie z kontekstem
-5. **Dodaj duszy** — nie tylko usuwaj złe wzorce, ale wstrzykuj prawdziwą osobowość, polski rytm i swobodę
-6. **Przeprowadź audyt końcowy** — zapytaj sam siebie: *"Co w poniższym tekście jeszcze zdradza, że to AI?"* — odpowiedz krótko, następnie: *"Teraz przepisz to tak, by przestało zdradzać AI."* i zrób drugą redakcję
+1. **Rozpoznaj gatunek i formę tekstu** — PRZED jakąkolwiek redakcją zidentyfikuj, z czym masz do czynienia (patrz sekcja ROZPOZNAWANIE GATUNKU poniżej). Tekst wyjściowy MUSI zachować ten sam gatunek i formę co tekst wejściowy. Akademicki zostaje akademicki, list miłosny zostaje listem miłosnym, dokumentacja techniczna zostaje dokumentacją techniczną. Nigdy nie zamieniasz eseju w opowiadanie ani pracy naukowej w blog.
+2. **Zidentyfikuj wzorce AI** — przeskanuj tekst pod kątem wzorców opisanych poniżej, ze szczególnym uwzględnieniem sekcji POLSKA SPECYFIKA.
+3. **Przepisz problematyczne fragmenty** — zastąp AI-izmy naturalnymi polskimi alternatywami właściwymi dla rozpoznanego gatunku.
+4. **Bezwzględnie zachowaj sens merytoryczny** — terminologia fachowa, definicje pojęć, twierdzenia, dane liczbowe, kwantyfikatory, modalność, zależności przyczynowo-skutkowe, zastrzeżenia i wyjątki muszą pozostać dokładnie takie same. Dotyczy to ZWŁASZCZA tekstów akademickich, prawnych, technicznych i regulacyjnych. Jeśli musisz wybierać między czystszą redakcją a wiernością znaczeniu — wybierasz wierność.
+5. **Dostosuj rejestr do gatunku** — formalny, akademicki, swobodny, branżowy, intymny — zgodnie z rozpoznanym gatunkiem, nie według własnych preferencji.
+6. **Dodaj duszy — z umiarem właściwym gatunkowi** — esej, blog, list, post mogą i powinny mieć osobisty głos. Tekst akademicki, dokumentacja techniczna, akt prawny — z dużą ostrożnością albo wcale. Patrz sekcja ROZPOZNAWANIE GATUNKU.
+7. **Audyt AI** — zapytaj sam siebie: *"Co w poniższym tekście jeszcze zdradza, że to AI?"* — odpowiedz krótko, następnie: *"Teraz przepisz to tak, by przestało zdradzać AI."* i zrób drugą redakcję.
+8. **Audyt semantyczny** — porównaj wyjście z wejściem twierdzenie po twierdzeniu (patrz sekcja AUDYT SEMANTYCZNY). Jeśli cokolwiek zmieniło sens — popraw, nawet kosztem słabszej redakcji.
+
+## ROZPOZNAWANIE GATUNKU
+
+To jest pierwszy krok i nie wolno go pominąć. Forma wyjścia = forma wejścia. Nigdy nie zamieniasz pracy naukowej w blog ani listu miłosnego w mail służbowy. Redakcja ma usuwać AI-slop, nie zmieniać gatunku tekstu.
+
+### Jak rozpoznać gatunek
+
+Skanujesz tekst pod kątem sygnałów:
+- **leksykalnych** (terminologia fachowa, slang, kolokwializmy, anglicyzmy, archaizmy)
+- **składniowych** (długość zdań, hipotaksa vs parataksa, strona bierna, równoważniki)
+- **strukturalnych** (akapity, śródtytuły, lista odniesień, formuły powitalne/pożegnalne, struktura argumentacji)
+- **kontekstualnych** (do kogo zwraca się autor, jaki cel komunikacyjny, jaka relacja nadawca–odbiorca)
+
+### Mapa gatunków
+
+| Gatunek | Sygnały rozpoznawcze | Co BEZWZGLĘDNIE zachować | Co MOŻNA zmienić | Pułapki redakcji |
+|---------|----------------------|--------------------------|------------------|------------------|
+| **Tekst akademicki / praca naukowa / artykuł** | terminologia fachowa, cytowania, przypisy, „w pracy wykazano", formalna 3. osoba, hipotaksa, struktura IMRaD | terminologię, definicje, kwantyfikatory, modalność, cytaty, odniesienia regulacyjne, dane liczbowe, strukturę argumentacji | dobór synonimów stylistycznych (anglicyzm → polski ekwiwalent), interpunkcję, długość zdań w zakresie hipotaksy, frazy-wypełniacze | **nie wprowadzaj 1. osoby pojedynczej**, nie dodawaj „duszy", anegdot ani dygresji. Bardzo łatwo zmienić znaczenie pojęcia przez synonim |
+| **Praca dyplomowa / thesis** | jak akademicki + spis treści, deklarowane cele, hipotezy, metodologia | jak akademicki + numerację rozdziałów i odniesień wewnętrznych | jak akademicki | jak akademicki; szczególnie krytyczne w częściach analitycznych |
+| **Tekst prawny / regulacyjny / dokument zgodności** | numery artykułów, paragrafów, ustępów, „zgodnie z art. X", odwołania do aktów prawnych, definicje legalne | KAŻDE słowo z definicji legalnych, numerację, modalność („może" ≠ „musi" ≠ „powinien"), zakres podmiotowy i przedmiotowy | jedynie usuwanie kalek typograficznych i artefaktów AI | bardzo wąski margines redakcji — w razie wątpliwości zostaw oryginał |
+| **Dokumentacja techniczna / instrukcja** | tryb rozkazujący lub bezosobowy, kroki numerowane, bloki kodu, terminologia produktu | dokładność kroków, nazwy elementów UI, parametry, wartości domyślne, ostrzeżenia | strona bierna → tryb rozkazujący, frazy-wypełniacze, kalki angielskie | nie pomijaj kroków „dla zwięzłości"; nie zmieniaj kolejności |
+| **Raport / dokument korporacyjny / opracowanie branżowe** | tabele, dane, KPI, wnioski wykonawcze, executive summary | dane liczbowe, wnioski, rekomendacje, daty | korpomowę („dostarczać wartość" → „przynosić korzyść"), reguły trzech, frazy-wypełniacze | nie spłaszczaj rekomendacji ani zastrzeżeń |
+| **Esej / publicystyka / felieton** | 1. osoba, opinia autora, dygresje, retoryka, argumentacja | tezę, ton autora (jeśli rozpoznawalny), kluczowe argumenty | rytm zdań, dobór słów, dodawanie głosu i krawędzi | tu DUSZA jest pożądana; ale nie zmieniaj tezy ani wniosków |
+| **Post na blog** | luźniejszy ton, śródtytuły, czasem 2. osoba do czytelnika, anegdoty, czasem CTA | tezę wpisu, fakty, linki, wezwania do działania | rejestr w stronę luźniejszego, długość zdań, osobiste wtręty | uważaj na blogi techniczne — tam fakty są krytyczne jak w dokumentacji |
+| **Mail służbowy** | formuły powitalne/pożegnalne, jasny cel komunikacyjny, zwięzłość | cel maila, prośby, terminy, ustalenia, formuły grzecznościowe odpowiednie do relacji | rozwlekłość, korpomowę, kalki angielskie | nie skracaj do tego stopnia, że adresat nie wie, o co chodzi; nie zmieniaj poziomu uprzejmości |
+| **Mail prywatny / list nieformalny** | bezpośrednie zwroty, swoboda, czasem skróty, ton zażyłości | relację, ton, intymność, żarty wewnętrzne | rozwlekłość, AI-izmy, sztampowe formuły | nie sterylizuj; mail do siostry ma brzmieć jak mail do siostry |
+| **List miłosny** | 1. osoba do 2. osoby, emocje, konkretne wspomnienia, intymność, czasem czułe przezwiska | emocje, konkrety osobiste, ton, czułość, rytm intymny | sformułowania ogólnikowe → konkretne, klisze romantyczne → świeże zwroty | NIE redaguj w stronę chłodnej poprawności; list miłosny ma prawo do nadmiaru |
+| **Wpis w mediach społecznościowych** | krótka forma, hashtagi (świadome), ton zależny od platformy, czasem emoji świadomie | przekaz, hashtagi merytoryczne, oznaczenia | hashtagi-spam, emoji-spam, AI-izmy zakończeń | LinkedIn ≠ Twitter ≠ Instagram — rozpoznaj platformę po kontekście |
+| **Opowiadanie / proza literacka** | dialogi, narracja, czas przeszły lub teraźniejszy konsekwentnie, świat przedstawiony | fabułę, postacie, świat przedstawiony, dialogi (treść), styl narratora | dobór słów (jeśli AI-słownictwo), rytm zdań, kalki angielskie | nie zmieniaj decyzji narracyjnych autora; nie „poprawiaj" stylu, jeśli jest celowo specyficzny |
+| **Poezja / wiersz** | rytm, rym (lub jego świadomy brak), obrazowanie, krótkie linie, układ graficzny | KAŻDY element formalny, układ graficzny, środki stylistyczne | jedynie najbardziej rażące AI-izmy (np. „w stale zmieniającym się świecie") | margines redakcji minimalny — w wierszu każde słowo nosi wagę |
+| **Reklama / marketing copy** | hasła, CTA, perswazja, emocje, krótkie zdania | przekaz marki, USP, CTA, ton brandu | korpomowę (paradoksalnie często bywa AI-slop), frazy-wytrychy | „dynamiczny", „dedykowany", „innowacyjny" to często marketing-AI cross-over — usuwaj, ale nie kosztem przekazu |
+
+### Co robić, jeśli gatunek jest mieszany lub niejasny
+
+- **Mieszany** (np. blog techniczny, raport z fragmentami eseju): rozpoznaj dominantę i obsługuj fragmenty wg ich własnej logiki. Jeśli to blog techniczny — zachowuj fakty jak w dokumentacji, ale pozwól na osobisty głos w częściach narracyjnych.
+- **Niejasny / zbyt krótki, żeby orzec**: domyślnie wybieraj bardziej zachowawczą strategię (mniej zmian, więcej szacunku dla oryginału).
+- **Gatunek nieobecny w tabeli**: zidentyfikuj najbliższy z listy, kierując się sygnałami leksykalno-składniowymi.
+
+### Raport rozpoznania gatunku
+
+Na początku odpowiedzi zaraportuj krótko:
+
+> **Rozpoznany gatunek:** [nazwa] — [1–2 zdania uzasadnienia z konkretnymi sygnałami z tekstu]
+
+Jeśli się wahasz między dwoma — powiedz to wprost i uzasadnij wybór.
+
+---
 
 ## Kalibracja głosu (opcjonalnie)
 
@@ -204,9 +256,42 @@ Te wzorce pochodzą z Wikipedia: Signs of AI writing i humanizera Bladera. Są s
 
 **Po:** Nie musisz tworzyć pliku konfiguracyjnego. Program zapisuje wyniki sam.
 
-### 14. Nadużywanie em-dasha (—)
+### 14. Nadużywanie myślnika jako łącznika składniowego (CRITICAL)
 
-**Problem:** LLM-y używają em-dashy znacznie częściej niż ludzie. **W polskim to szczególnie palący problem** — patrz sekcja TYPOGRAFIA poniżej.
+**Problem:** Myślnik jest jednym z najsilniejszych pojedynczych sygnałów tekstu generowanego przez AI — i to nie tylko ze względu na typografię (em-dash bez spacji w angielskim stylu — patrz sekcja 32), ale **przede wszystkim z powodu funkcji składniowej**. LLM-y nagminnie łączą zdania myślnikami tam, gdzie ludzki autor postawiłby spójnik, przecinek, dwukropek albo zwykłą kropkę. **W polskim ten wzorzec jest szczególnie nienaturalny**, bo polszczyzna dysponuje bogatym systemem spójników podrzędnych i zaimków względnych (*który, ponieważ, gdyż, bo, gdy, jeżeli, choć, mimo że, co, dlatego, więc, zatem, dzięki czemu*), które AI mechanicznie pomija na rzecz prostszej, "angielskiej" struktury z dwoma dashami.
+
+**Symptomy diagnostyczne:**
+
+- **Łańcuchy myślników** (3+ myślników na akapit, czasem 2-3 w jednym zdaniu) — najmocniejszy sygnał.
+- **Podwójny myślnik w roli nawiasu wtrąconego**, gdzie naturalniej zadziałałyby przecinki albo nawiasy: *"System — kluczowy element architektury — zbiera logi"*.
+- **Myślnik zamiast spójnika podrzędnego** — to esencja problemu w polskim:
+  - *"Wdrożyliśmy nowe API — to zmniejszyło latencję"* → *"Wdrożyliśmy nowe API, **co** zmniejszyło latencję"*
+  - *"Testy nie przeszły — kod miał błąd"* → *"Testy nie przeszły, **bo** kod miał błąd"*
+  - *"Zastosowano nową metodę — autorzy chcieli zweryfikować hipotezę"* → *"Zastosowano nową metodę, **ponieważ** autorzy chcieli zweryfikować hipotezę"*
+  - *"Regulacja weszła w życie w 2025 — wymaga od banków wdrożenia PQC"* → *"Regulacja, **która** weszła w życie w 2025, wymaga od banków wdrożenia PQC"*
+- **Myślnik zamiast dwukropka** (przed wyliczeniem albo wyjaśnieniem): *"Rozwiązanie jest proste — wystarczy zmienić konfigurację"* → *"Rozwiązanie jest proste: wystarczy zmienić konfigurację"*.
+- **Myślnik zamiast kropki** (gdy dwa zdania są tylko luźno powiązane): *"Aplikacja działa szybko — interfejs jest intuicyjny"* → *"Aplikacja działa szybko. Interfejs jest intuicyjny"*.
+
+**Przed:**
+
+> System monitorujący — kluczowy element architektury — zbiera logi z każdej mikrousługi — co pozwala na szybką diagnozę problemów — szczególnie w godzinach szczytu — gdy ruch jest największy.
+
+**Po:**
+
+> System monitorujący jest kluczowym elementem architektury. Zbiera logi z każdej mikrousługi, dzięki czemu możemy szybko diagnozować problemy, zwłaszcza w godzinach szczytu, gdy ruch jest największy.
+
+**Strategia redakcji "myślnikowej":**
+
+1. **Policz myślniki na 100 słów.** Powyżej 2-3 — sygnał alarmowy. Powyżej 5 — prawie pewnie AI. (W tekstach akademickich i regulacyjnych próg jest jeszcze niższy — tam myślnik retoryczny jest rzadkością.)
+2. **Dla każdego myślnika zapytaj: "co tu by zrobił ludzki autor?"** Przecinek? Dwukropek? Kropka? Spójnik? Wybierz najnaturalniejszą opcję dla polskiej składni.
+3. **Podwójne myślniki (wtrącenia)** — zamień na przecinki (najczęściej) albo nawiasy.
+4. **Myślnik łączący zdania** — najczęściej powinien być **spójnikiem podrzędnym** (*bo, ponieważ, dlatego, co, który, gdy, jeżeli, dzięki czemu*) albo dwoma osobnymi zdaniami.
+5. **Myślnik przed wyjaśnieniem/wyliczeniem** — zamień na dwukropek.
+6. **Zostaw myślnik tylko tam, gdzie naprawdę pełni rolę pauzy retorycznej** — i to półpauzą ze spacjami, nie em-dashem (patrz sekcja 32 TYPOGRAFIA dla poprawnego znaku).
+
+**Reguła kciuka:** *"Jeśli możesz zastąpić myślnik czymkolwiek innym bez utraty sensu — zastąp."* Dobry polski tekst używa myślnika oszczędnie, jako figury retorycznej, nie jako maszynowego łącznika składniowego. Polszczyzna ma bogaty system spójników — używajmy ich.
+
+**Pułapka redakcji:** zamiana myślnika na spójnik podrzędny zmienia rejestr (formalnie nieco bardziej "akademicki"). W tekstach swobodnych (esej, blog, mail) lepsza bywa kropka i dwa zdania niż natłok spójników. W tekstach akademickich i regulacyjnych — spójnik podrzędny jest właściwym wyborem, bo czyni relacje logiczne jawnymi.
 
 ### 15. Nadużywanie pogrubień
 
@@ -466,32 +551,151 @@ W polskim widać to jaskrawiej niż w angielskim — bo polski rynek/prawo/kultu
 
 ---
 
+## AUDYT SEMANTYCZNY
+
+Najważniejsza sekcja całego skilla. Każda redakcja, która zmienia znaczenie pojęcia, twierdzenia, danej liczbowej, kwantyfikatora albo modalności — jest błędem. Dotyczy WSZYSTKICH gatunków, ale w tekstach akademickich, prawnych, technicznych i regulacyjnych jest sprawą krytyczną.
+
+Po zakończeniu drugiej redakcji (po audycie AI) wykonujesz audyt semantyczny.
+
+### Procedura
+
+**Krok 1. Wyodrębnij twierdzenia kluczowe z oryginału.**
+
+Idź zdanie po zdaniu i zaznacz każde, które zawiera:
+- definicję pojęcia („X to…", „X oznacza…", „przez X rozumiemy…")
+- twierdzenie merytoryczne („X powoduje Y", „X wpływa na Y", „X jest cechą Y")
+- daną liczbową (procent, kwotę, datę, próbkę, próg, parametr)
+- nazwę własną, skrótowiec, numer artykułu/normy/standardu, cytat
+- kwantyfikator („wszystkie", „większość", „część", „niektóre", „żaden")
+- modalność („musi", „powinien", „może", „prawdopodobnie", „rzekomo")
+- zastrzeżenie, warunek, wyjątek („pod warunkiem, że…", „z wyjątkiem…", „chyba że…")
+- zależność przyczynowo-skutkową lub logiczną („ponieważ", „dlatego", „w konsekwencji", „mimo to")
+
+**Krok 2. Zbuduj tabelę porównawczą.**
+
+Dla każdego wyodrębnionego twierdzenia wystaw rząd w tabeli:
+
+| # | Oryginał (twierdzenie/fragment) | Po redakcji | Status |
+|---|----|----|----|
+| 1 | [krótki fragment oryginału] | [odpowiadający fragment z redakcji] | ✅ identyczne / ⚠️ ryzyko / ❌ zmiana sensu |
+
+Status:
+- **✅ identyczne** — sens, modalność, kwantyfikator, terminologia zachowane
+- **⚠️ ryzyko** — synonim/przeformułowanie, które może zmieniać niuans (dla terminów fachowych zawsze ⚠️ albo ❌)
+- **❌ zmiana sensu** — wymaga poprawki
+
+**Krok 3. Popraw wszystko, co ma ❌, i przejrzyj każde ⚠️.**
+
+Jeżeli ⚠️ nie da się usunąć bez wprowadzenia AI-izmu — zostaw oryginalne sformułowanie. Wierność znaczeniu > czystość redakcji.
+
+**Krok 4. Wystaw końcowy werdykt.**
+
+> **Audyt semantyczny: ZGODNE** — wszystkie kluczowe twierdzenia zachowane.
+>
+> *lub*
+>
+> **Audyt semantyczny: ZGODNE Z ZASTRZEŻENIAMI** — patrz pozycje [X, Y, Z] w tabeli, gdzie [krótkie uzasadnienie, dlaczego zmiana jest akceptowalna albo nieuniknion].
+
+### Typowe pułapki redakcji zmieniającej sens
+
+**1. Synonim zmienia zakres znaczeniowy pojęcia.**
+
+| Zmiana | Co się dzieje |
+|--------|---------------|
+| *implementacja* → *wdrożenie* | OK w większości kontekstów |
+| *implementacja* → *realizacja* | często gubi techniczny niuans |
+| *crypto-agility* → *elastyczność kryptograficzna* | gubi specyficzną definicję NIST/ENISA — termin jest *terminem*, nie opisem cechy |
+| *podatność umożliwiająca eskalację uprawnień* → *luka w zabezpieczeniach* | gubi typ podatności i wektor ataku |
+| *audyt zgodności* → *kontrola zgodności* | „audyt" ma specyficzne znaczenie w ISO/regulacjach |
+| *kryptoanaliza* → *analiza kryptograficzna* | to nie to samo |
+
+**Reguła:** terminologia fachowa, regulacyjna, prawna, normalizacyjna — NIE jest przedmiotem stylistycznej zamiany na synonimy. Jeśli oryginał używa konkretnego terminu zdefiniowanego w normie/regulacji/literaturze przedmiotu — zachowujesz go nawet jeśli brzmi „angielsko" albo „korpo".
+
+**2. Uproszczenie gubi treść.**
+
+- *„większość banków regulowanych przez KNF, z wyjątkiem banków spółdzielczych poniżej progu X, musi do roku 2027…"* — NIE upraszczaj do *„banki muszą do 2027…"*. Każde słowo zastrzeżenia jest istotne.
+
+**3. Zmiana kwantyfikatora.**
+
+- *„wiele instytucji"* ≠ *„większość instytucji"* ≠ *„wszystkie instytucje"*
+- *„niektóre"* ≠ *„część"* (w niektórych kontekstach prawnych tak, w innych nie)
+- *„może wystąpić"* ≠ *„występuje"* ≠ *„zawsze występuje"*
+
+**4. Zmiana modalności.**
+
+- *„sugeruje"* ≠ *„wskazuje"* ≠ *„udowadnia"* ≠ *„dowodzi"*
+- *„prawdopodobnie"* ≠ *„najpewniej"* ≠ *„z pewnością"*
+- *„może"* (uprawnienie) ≠ *„powinien"* (zalecenie) ≠ *„musi"* (obowiązek)
+
+**5. Połączenie dwóch niezależnych twierdzeń w jedno** — gubi strukturę argumentu.
+
+**6. Rozdzielenie jednego twierdzenia na dwa** — może zmienić wagę lub kolejność logiczną.
+
+**7. Pominięcie zastrzeżenia** — najczęstszy błąd redakcji w kierunku zwięzłości.
+
+**8. Zmiana zakresu czasowego / przestrzennego / podmiotowego.**
+
+- *„od 2025 roku"* ≠ *„w 2025 roku"* ≠ *„od stycznia 2025"*
+- *„w sektorze finansowym"* ≠ *„w bankowości"* (sektor finansowy ⊃ bankowość)
+
+### Krótki przykład audytu semantycznego
+
+**Oryginał (fragment akademicki):**
+
+> Zgodnie z nierównością Mosci, organizacja powinna rozpocząć migrację na algorytmy PQC, gdy suma czasu życia chronionych danych (X) i czasu wdrożenia migracji (Y) zaczyna przewyższać prognozowany czas do pojawienia się kryptograficznie istotnego komputera kwantowego (Z).
+
+**Po redakcji (kandydat):**
+
+> Nierówność Mosci wskazuje, że organizacje powinny migrować na algorytmy PQC, gdy okres ochrony danych i czas migracji łącznie przekroczą prognozę pojawienia się komputera kwantowego.
+
+**Tabela audytu:**
+
+| # | Oryginał | Po redakcji | Status |
+|---|----------|-------------|--------|
+| 1 | „Zgodnie z nierównością Mosci" | „Nierówność Mosci wskazuje, że" | ⚠️ — zmiana z odwołania do reguły na sformułowanie aktywne; akceptowalne, znaczenie zachowane |
+| 2 | „organizacja powinna rozpocząć migrację" | „organizacje powinny migrować" | ❌ — „rozpocząć migrację" (moment startu) ≠ „migrować" (proces). To krytyczny niuans w nierówności Mosci |
+| 3 | „suma czasu życia chronionych danych (X) i czasu wdrożenia migracji (Y)" | „okres ochrony danych i czas migracji łącznie" | ⚠️ — utrata oznaczeń zmiennych (X, Y, Z), które mogą być wykorzystane dalej w wywodzie |
+| 4 | „prognozowany czas do pojawienia się kryptograficznie istotnego komputera kwantowego (Z)" | „prognozę pojawienia się komputera kwantowego" | ❌ — utrata „kryptograficznie istotnego" (to nie jest dowolny komputer kwantowy, tylko CRQC) |
+
+**Werdykt:** Audyt semantyczny: NIEZGODNE w pozycjach 2 i 4. Konieczna poprawka — w sformułowaniu „rozpocząć migrację" oraz „kryptograficznie istotny komputer kwantowy (CRQC)".
+
+---
+
 ## Proces redakcji
 
-1. Przeczytaj tekst uważnie
-2. Zidentyfikuj wystąpienia wszystkich wzorców powyżej — z naciskiem na POLSKA SPECYFIKA (część B)
-3. Przepisz każdy problematyczny fragment
-4. Zadbaj, by zredagowany tekst:
+1. **Rozpoznaj gatunek tekstu** (sekcja ROZPOZNAWANIE GATUNKU) — zaraportuj rozpoznanie krótkim zdaniem na początku odpowiedzi
+2. Przeczytaj tekst uważnie
+3. Zidentyfikuj wystąpienia wszystkich wzorców powyżej — z naciskiem na POLSKA SPECYFIKA (część B), pamiętając o ograniczeniach narzucanych przez gatunek
+4. Przepisz każdy problematyczny fragment w granicach właściwych dla gatunku
+5. Zadbaj, by zredagowany tekst:
    - brzmiał naturalnie, gdy czyta się go na głos
-   - miał zmienny rytm zdań
+   - miał zmienny rytm zdań (w granicach gatunku — w pracy naukowej mniej, w eseju więcej)
    - używał konkretów zamiast ogólników
-   - utrzymywał rejestr odpowiedni do kontekstu (akademicki, branżowy, swobodny)
-   - używał prostych konstrukcji (*jest*, *ma*, *robi*) tam, gdzie to czytelniejsze
+   - utrzymywał rejestr odpowiedni do rozpoznanego gatunku
+   - używał prostych konstrukcji (*jest*, *ma*, *robi*) tam, gdzie to czytelniejsze i gdzie gatunek na to pozwala
    - miał poprawną polską typografię (cudzysłowy „…", półpauza ze spacjami, dywizy w łączeniach)
-5. Przedstaw pierwszą wersję redakcji
-6. Zadaj sobie pytanie: *"Co w poniższym tekście jeszcze zdradza AI?"*
-7. Odpowiedz krótko, wymieniając pozostałe sygnały (jeśli zostały)
-8. Zadaj sobie pytanie: *"Teraz przepisz to tak, żeby przestało zdradzać AI."*
-9. Przedstaw finalną wersję
+   - **zachowywał terminologię fachową, definicje, dane i modalność bez zmian**
+6. Przedstaw pierwszą wersję redakcji
+7. Zadaj sobie pytanie: *"Co w poniższym tekście jeszcze zdradza AI?"*
+8. Odpowiedz krótko, wymieniając pozostałe sygnały (jeśli zostały)
+9. Zadaj sobie pytanie: *"Teraz przepisz to tak, żeby przestało zdradzać AI."*
+10. Przedstaw drugą redakcję
+11. **Przeprowadź audyt semantyczny** (sekcja AUDYT SEMANTYCZNY) — wyodrębnij kluczowe twierdzenia, zbuduj tabelę porównawczą, oceń statusy
+12. **Popraw wszystko z ❌, przejrzyj ⚠️** — jeśli trzeba, zrób trzecią redakcję częściową
+13. Wystaw werdykt audytu semantycznego
+14. Przedstaw finalną wersję
 
 ## Format wyjściowy
 
-Dostarcz:
+Dostarcz w tej kolejności:
 
-1. **Pierwsza redakcja** — pełny przepisany tekst
-2. **Audyt: "Co jeszcze zdradza AI?"** — krótka lista pozostałych sygnałów
-3. **Finalna redakcja** — wersja po drugim przejściu
-4. **Wykaz zmian** (opcjonalnie, jeśli pomaga) — krótka lista głównych typów zmian z odniesieniami do numerów wzorców
+1. **Rozpoznany gatunek** — 1 zdanie + uzasadnienie
+2. **Pierwsza redakcja** — pełny przepisany tekst
+3. **Audyt AI: „Co jeszcze zdradza AI?"** — krótka lista pozostałych sygnałów
+4. **Druga redakcja** — wersja po drugim przejściu redakcyjnym
+5. **Audyt semantyczny** — tabela porównawcza kluczowych twierdzeń (oryginał → po redakcji → status) + werdykt końcowy
+6. **Finalna wersja** — jeśli audyt semantyczny wymusił poprawki, wersja po nich; jeśli nie, można wprost zaznaczyć: *„Finalna = druga redakcja, audyt semantyczny bez zastrzeżeń"*
+7. **Wykaz zmian** (opcjonalnie, jeśli pomaga) — krótka lista głównych typów zmian z odniesieniami do numerów wzorców
 
 ---
 
@@ -515,21 +719,26 @@ Dostarcz:
 >
 > Podsumowując, przyszłość rysuje się obiecująco. Przed nami pasjonujące czasy, gdy kontynuujemy tę podróż ku doskonałości. Daj znać, jeśli chciałbyś, abym rozwinął któryś z fragmentów!
 
+### Rozpoznany gatunek:
+
+**Blog / publicystyka branżowa o AI w pracy programisty.** Sygnały: ton ogólnoperswazyjny, hasła marketingowe („propozycja wartości", „odblokowanie kreatywności"), brak cytowań i odniesień regulacyjnych, lista bullet-pointów z emoji, formuły otwierające i zamykające typowe dla content marketingu. Pozwala na luźniejszy rejestr, 1. osobę i dodanie głosu autorskiego.
+
 ### Pierwsza redakcja:
 
 > Asystenci AI mogą przyspieszyć niektóre części pracy. Najlepiej radzą sobie z boilerplate'em: pliki konfiguracyjne, szkielety testów, powtarzalne refaktoryzacje. Słabiej — z rozumieniem, kiedy się mylą. Zdarzyło mi się zaakceptować podpowiedzi, które się skompilowały, przeszły lint i wciąż robiły coś innego, niż chciałem, bo przestałem patrzeć.
 >
 > Programiści, z którymi rozmawiam, dzielą się na dwa obozy. Jedni używają tego jak autouzupełniania do nudnych fragmentów i przeglądają każdą linię. Drudzy wyłączają, gdy narzędzie zaczyna podpowiadać wzorce ze starych, wewnętrznych bibliotek. Obie postawy są rozsądne.
 >
-> Metryki wydajności są śliskie. GitHub może mówić, że użytkownicy Copilota "akceptują 30% sugestii", ale akceptacja to nie poprawność, a poprawność to nie wartość. Bez testów po prostu zgadujesz.
+> Metryki wydajności są śliskie. GitHub może mówić, że użytkownicy Copilota „akceptują 30% sugestii", ale akceptacja to nie poprawność, a poprawność to nie wartość. Bez testów po prostu zgadujesz.
 
-### Audyt: "Co jeszcze zdradza AI?"
+### Audyt AI: „Co jeszcze zdradza AI?"
 
-- Rytm trochę za równy — krótkie i średnie zdania, brak prawdziwego "uderzenia"
-- "Obie postawy są rozsądne" pachnie miłą, sztampową puentą
+- Rytm trochę za równy — krótkie i średnie zdania, brak prawdziwego „uderzenia"
+- „Obie postawy są rozsądne" pachnie miłą, sztampową puentą
 - Brak własnego, osobistego głosu — żadnej anegdoty z prawdziwego życia, żadnej krawędzi
+- Sprawdziłem gęstość myślników (wzorzec 14) — w pierwszej redakcji są dwa, oba w funkcji retorycznej pauzy, nie składniowej. Bezpiecznie
 
-### Finalna redakcja:
+### Druga redakcja:
 
 > AI do kodu przyspiesza nudne kawałki. Nic więcej. I dobrze.
 >
@@ -537,28 +746,47 @@ Dostarcz:
 >
 > Ludzie, których pytam, dzielą się na dwa typy. Jedni traktują to jak autouzupełnianie i czytają każdą linię. Drudzy wyłączyli po dwóch tygodniach, bo Copilot uparcie podpowiadał wzorce z bibliotek, których u nich nikt już nie używa.
 >
-> Metryki? Każdy podaje swoje. GitHub mówi o "30% akceptacji". OK, ale akceptacja to nie poprawność, a poprawność to nie wartość. Jak nie masz testów — zgadujesz.
+> Metryki? Każdy podaje swoje. GitHub mówi o „30% akceptacji". OK, ale akceptacja to nie poprawność, a poprawność to nie wartość. Jak nie masz testów — zgadujesz.
+
+### Audyt semantyczny:
+
+| # | Oryginał (twierdzenie/fragment) | Po redakcji | Status |
+|---|---|---|---|
+| 1 | „AI w cyberbezpieczeństwie / asystenci AI" — przedmiot | „AI do kodu / asystenci AI" | ⚠️ — oryginał był nominalnie o „AI w cyberbezpieczeństwie", redakcja zawęża do „AI do kodu". Oryginał jednak w całości opisywał generowanie kodu, refaktoryzację, dokumentację — więc redakcja precyzyjniej oddaje rzeczywistą treść |
+| 2 | „adopcja przyspieszyła od hobbystycznych eksperymentów do firmowych wdrożeń" | (pominięte) | ⚠️ — usunięto, bo to fałszywy zakres-AI; redakcja zachowuje fakt różnicowania użytkowników w innej formie |
+| 3 | „GitHub… 30%" (akceptacja sugestii Copilota) | „GitHub mówi o «30% akceptacji»" | ✅ — fakt zachowany, modalność „mówi" oddaje wątpliwość źródła |
+| 4 | „akceptacja to nie poprawność, a poprawność to nie wartość" | „akceptacja to nie poprawność, a poprawność to nie wartość" | ✅ — twierdzenie kluczowe (logiczne rozróżnienie) zachowane dosłownie |
+| 5 | „halucynacje, biasy, kwestie odpowiedzialności" — wyliczenie problemów | (pominięte) | ⚠️ — wyliczenie generyczne, usunięte jako AI-slop; jeśli oryginał miał na celu konkretną listę wyzwań, redakcja gubi tę informację. Tu redakcja zachowała ogólny ton ostrożności bez konkretów |
+
+**Werdykt:** Audyt semantyczny: ZGODNE Z ZASTRZEŻENIAMI. Brak twierdzeń krytycznych (terminologii fachowej, danych liczbowych poza „30%", odniesień regulacyjnych). Gatunek (blog/publicystyka) toleruje skrót i zawężenie tematu, więc redakcja jest akceptowalna. W tekście akademickim ta sama strategia byłaby niedopuszczalna.
+
+### Finalna wersja:
+
+= Druga redakcja (audyt semantyczny bez zastrzeżeń krytycznych).
 
 ### Wykaz zmian:
 
-- Usunięto artefakty czatu ("Świetne pytanie!", "Mam nadzieję, że to pomogło", "Daj znać...") — wzorzec 20
-- Usunięto pompowanie znaczenia ("kluczowy moment w ewolucji", "stanowi świadectwo", "wpisane w samo serce") — wzorce 1, 4
-- Usunięto kalkę "enduring" (pozostawione angielskie słowo!), "cross-funkcyjny", "solo developerów", "doświadczenia użytkownikom" — wzorzec 30
-- Usunięto kalki "stanowi fundament", "pełni funkcję katalizatora", "służy jako partner" → zwykłe "jest"/"to" — wzorzec 8
-- Usunięto regułę trzech ("usprawnianie, wzmacnianie, pielęgnowanie") — wzorzec 10
-- Usunięto negatywne paralelizmy ("to nie tylko X, to Y") — wzorzec 9
-- Usunięto fałszywe zakresy ("od X do Y, od A do B") — wzorzec 12
+- Rozpoznany gatunek: blog/publicystyka — toleruje 1. osobę, anegdotę, zawężenie tematu
+- Usunięto artefakty czatu („Świetne pytanie!", „Mam nadzieję, że to pomogło", „Daj znać...") — wzorzec 20
+- Usunięto pompowanie znaczenia („kluczowy moment w ewolucji", „stanowi świadectwo", „wpisane w samo serce") — wzorce 1, 4
+- Usunięto kalkę „enduring" (pozostawione angielskie słowo!), „cross-funkcyjny", „solo developerów", „doświadczenia użytkownikom" — wzorzec 30
+- Usunięto kalki „stanowi fundament", „pełni funkcję katalizatora", „służy jako partner" → zwykłe „jest"/„to" — wzorzec 8
+- Usunięto regułę trzech („usprawnianie, wzmacnianie, pielęgnowanie") — wzorzec 10
+- Usunięto negatywne paralelizmy („to nie tylko X, to Y") — wzorzec 9
+- Usunięto fałszywe zakresy („od X do Y, od A do B") — wzorzec 12
 - Usunięto em-dashe bez spacji (—nestled—) → półpauzy ze spacjami albo zwykłe przecinki — wzorzec 32
 - Usunięto emoji, pogrubienia w listach, listę inline-headerową — wzorce 15, 16, 18
-- Usunięto polski GPT-izm "W dzisiejszym dynamicznym świecie" — wzorzec 31
-- Usunięto formuliczne "Pomimo wyzwań... rozwija się" — wzorzec 6
-- Usunięto cutoff-disclaimer "szczegółowe informacje są ograniczone" — wzorzec 21
-- Usunięto nadmierne hedging "można potencjalnie argumentować, że mogłyby mieć pewien wpływ" — wzorzec 24
-- Usunięto frazy-wypełniacze ("W celu osiągnięcia", "W oparciu o") — wzorzec 23
-- Usunięto generyczne pozytywne zakończenie "Przyszłość rysuje się obiecująco" — wzorzec 25
-- Usunięto "Podsumowując" — wzorzec 31 (typowy polski GPT-izm zakończeń)
-- Dodano osobisty głos (pierwsza osoba, anegdota, lekka krawędź) — sekcja GŁOS I DUSZA
+- Usunięto polski GPT-izm „W dzisiejszym dynamicznym świecie" — wzorzec 31
+- Usunięto formuliczne „Pomimo wyzwań... rozwija się" — wzorzec 6
+- Usunięto cutoff-disclaimer „szczegółowe informacje są ograniczone" — wzorzec 21
+- Usunięto nadmierne hedging „można potencjalnie argumentować, że mogłyby mieć pewien wpływ" — wzorzec 24
+- Usunięto frazy-wypełniacze („W celu osiągnięcia", „W oparciu o") — wzorzec 23
+- Usunięto generyczne pozytywne zakończenie „Przyszłość rysuje się obiecująco" — wzorzec 25
+- Usunięto „Podsumowując" — wzorzec 31 (typowy polski GPT-izm zakończeń)
+- Dodano osobisty głos (1. osoba, anegdota, lekka krawędź) — sekcja GŁOS I DUSZA (dopuszczalne dla rozpoznanego gatunku)
 - Zróżnicowano rytm: krótkie zdania uderzeniowe po dłuższych
+
+> **Uwaga:** dla tekstu akademickiego (praca naukowa, thesis, artykuł recenzowany) ta sama redakcja byłaby zbyt agresywna — patrz przykład w sekcji AUDYT SEMANTYCZNY, gdzie zmiana „organizacja powinna rozpocząć migrację" na „organizacje powinny migrować" została oznaczona jako ❌, mimo że stylistycznie jest gładsza.
 
 ---
 
