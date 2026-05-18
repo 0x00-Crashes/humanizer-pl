@@ -8,6 +8,7 @@ Polskie teksty AI mają własne, dodatkowe znaczniki, których nie ma w angloję
 
 - **Kalki składniowe z angielskiego** — *oferta dedykowana, adresować problem, dostarczać wartość, w kontekście...*
 - **Polskie GPT-izmy** — *W dzisiejszym dynamicznym świecie..., Warto podkreślić..., Podsumowując...*
+- **Nadużycie myślnika jako łącznika składniowego** — zdania podrzędne łączone dashami zamiast spójnikami *ponieważ/bo/który/co*. W polskim szczególnie palące, bo polszczyzna ma bogaty system spójników, których LLM mechanicznie pomija na rzecz "angielskiej" struktury z dwoma dashami.
 - **Błędy typograficzne** — `"..."` zamiast `„..."`, em-dash bez spacji zamiast półpauzy ze spacjami
 - **Błędy fleksyjne** — *Wielu pisarzy starali się* zamiast *starało się*
 - **Brak lokalnego kontekstu** — pomylone polskie skrótowce, halucynacje w obszarze polskiego prawa, brak polskich idiomów
@@ -63,6 +64,8 @@ Albo poproś model bezpośrednio:
 Zhumanizuj ten polski tekst: [tekst]
 ```
 
+Skill reaguje też na fraza-triggery: *"za dużo myślników"*, *"usuń dashy"*, *"em-dash overuse"*, *"brzmi jak ChatGPT"*, *"popraw po AI"*.
+
 ### Kalibracja głosu
 
 Aby dopasować redakcję do Twojego osobistego stylu, dostarcz próbkę:
@@ -92,7 +95,7 @@ Skill jest szczególnie przydatny dla:
 
 ### Część A: Wzorce uniwersalne (29 wzorców z Wikipedia: Signs of AI writing)
 
-Pompowanie znaczenia, promocyjny ton, powierzchowne analizy z `-ąc/-ając`, formuliczne sekcje "Wyzwania", AI-słownictwo (*kluczowy, istotny, dynamiczny, w kontekście*), unikanie *jest*/*są* na rzecz *stanowi*/*pełni funkcję*, paralelizmy negatywne, reguła trzech, cykl synonimów, fałszywe zakresy, em-dash, pogrubienia, Title Case W Nagłówkach, emoji, curly quotes, artefakty czatu, sycofantyczny ton, frazy-wypełniacze, nadmierne hedging, generyczne pozytywne zakończenia, manieryczne pary z łącznikiem, tropy "prawdziwej autorytetu", sygnalizowanie zamiast działania, fragmentaryczne nagłówki.
+Pompowanie znaczenia, promocyjny ton, powierzchowne analizy z `-ąc/-ając`, formuliczne sekcje "Wyzwania", AI-słownictwo (*kluczowy, istotny, dynamiczny, w kontekście*), unikanie *jest*/*są* na rzecz *stanowi*/*pełni funkcję*, paralelizmy negatywne, reguła trzech, cykl synonimów, fałszywe zakresy, **nadużycie myślnika jako łącznika składniowego** (sekcja 14, CRITICAL — myślnik zamiast spójnika podrzędnego *co/bo/ponieważ/który*, łańcuchy dashy, myślnik zamiast dwukropka), pogrubienia, Title Case W Nagłówkach, emoji, curly quotes, artefakty czatu, sycofantyczny ton, frazy-wypełniacze, nadmierne hedging, generyczne pozytywne zakończenia, manieryczne pary z łącznikiem, tropy "prawdziwej autorytetu", sygnalizowanie zamiast działania, fragmentaryczne nagłówki.
 
 ### Część B: Polska specyfika (najważniejsza)
 
@@ -100,7 +103,7 @@ Pompowanie znaczenia, promocyjny ton, powierzchowne analizy z `-ąc/-ając`, for
 
 **31. Polskie GPT-izmy** — zwroty otwierające (*W dzisiejszym dynamicznym świecie...*), łączniki (*Warto podkreślić...*), domykacze (*Dzięki temu..., Co ostatecznie prowadzi do...*), zakończenia (*Podsumowując...*).
 
-**32. Polska typografia** — cudzysłowy „...", myślnik vs półpauza vs dywiz, spacje wokół półpauzy, anti-pattern em-dasha bez spacji, sygnały NASK (pusta spacja na początku akapitu, wielka litera po dwukropku w listach).
+**32. Polska typografia** — cudzysłowy „...", myślnik vs półpauza vs dywiz, spacje wokół półpauzy, anti-pattern em-dasha bez spacji, sygnały NASK (pusta spacja na początku akapitu, wielka litera po dwukropku w listach). Pracuje w parze z sekcją 14: 32 mówi *jakim znakiem*, 14 mówi *czy w ogóle go tu używać*.
 
 **33. Błędy fleksyjne** — zgodność podmiotu z orzeczeniem przy liczbie nieokreślonej, aspekt czasownika, rekcja przyimkowa, szyk wyrazów, odmiana nazw własnych.
 
@@ -124,6 +127,8 @@ Persona skilla — *John Miodek* — to ironiczny ukłon w stronę prof. Jana Mi
 
 ## Historia wersji
 
+- **1.2.0** — Rozszerzenie sekcji 14 ("Nadużywanie em-dasha") na pełnego *"traktata o myślniku"* (CRITICAL). Nacisk przesunięty z typografii (która zostaje w sekcji 32) na **funkcję składniową**: myślnik jako maszynowy zamiennik spójników podrzędnych *co/bo/ponieważ/który* — wzorzec szczególnie nienaturalny w polskim. Dodano 5 zdiagnozowanych podwzorców (łańcuchy dashy, podwójny myślnik w roli wtrącenia, myślnik zamiast spójnika/dwukropka/kropki), strategię redakcji "myślnikowej" (m.in. próg gęstości: 2-3/100 słów = sygnał, 5+ = prawie pewnie AI), regułę kciuka oraz świadomość rejestru (kropka vs spójnik). Triggery rozszerzone o *"za dużo myślników"*, *"usuń dashy"*, *"em-dash overuse"*.
+- **1.1.0** — *(do uzupełnienia)*
 - **1.0.0** — Pierwsze wydanie. Pełna część A (29 wzorców uniwersalnych z humanizera Bladera, spolszczone). Pełna część B (6 dużych sekcji polskiej specyfiki — kalki, GPT-izmy, typografia, fleksja, kontekst, rytm).
 
 ## Licencja
