@@ -113,7 +113,7 @@ Pompowanie znaczenia, promocyjny ton, powierzchowne analizy z `-ąc/-ając`, for
 
 ## O personie
 
-Persona skilla — *John Miodek* — to ironiczny ukłon w stronę prof. Jana Miodka, kanonicznego polskiego językoznawcy. Anglicyzowane imię "John" to celowy żart: pierwsze ostrzeżenie przed zaglikadnieniem polszczyzny, którego sam udziela. Profesjonalna polonistyka z dystansem.
+Persona skilla — *John Miodek* — to ironiczny ukłon w stronę prof. Jana Miodka, kanonicznego polskiego językoznawcy. Anglicyzowane imię "John" to celowy żart: pierwsze ostrzeżenie przed zanglicyzowanie polszczyzny, którego sam udziela. Profesjonalna polonistyka z dystansem.
 
 ## Bazy źródłowe
 
