@@ -174,7 +174,9 @@ Te wzorce pochodzą z Wikipedia: Signs of AI writing i humanizera Bladera. Są s
 
 **Przed:** Instytut Statystyki Katalonii został oficjalnie powołany w 1989 roku, wyznaczając kluczowy moment w ewolucji regionalnej statystyki w Hiszpanii. Inicjatywa ta wpisywała się w szerszy ruch decentralizacji administracyjnej.
 
-**Po:** Instytut Statystyki Katalonii powstał w 1989 roku, by gromadzić i publikować dane regionalne niezależnie od urzędu centralnego.
+**Po:** Instytut Statystyki Katalonii powstał w 1989 roku.
+
+*Celu instytutu nie dopisujesz. Zdanie o szerszym ruchu decentralizacji zostaje tylko ze źródłem.*
 
 ### 2. Wyolbrzymianie obecności w mediach
 
@@ -182,7 +184,9 @@ Te wzorce pochodzą z Wikipedia: Signs of AI writing i humanizera Bladera. Są s
 
 **Przed:** Jej poglądy cytowano w "Gazecie Wyborczej", "Rzeczpospolitej" i "Polityce". Prowadzi aktywne profile w mediach społecznościowych.
 
-**Po:** W wywiadzie dla "Polityki" z 2024 roku argumentowała, że regulacja AI powinna skupiać się na skutkach, nie na metodach.
+**Po:** Jej poglądy cytowano w „Gazecie Wyborczej”, „Rzeczpospolitej” i „Polityce”.
+
+*Zdanie o profilach wypada. Treści jej wypowiedzi nie dopisujesz.*
 
 ### 3. Powierzchowne analizy z końcówką imiesłowową (-ąc, -ając)
 
@@ -192,7 +196,9 @@ Te wzorce pochodzą z Wikipedia: Signs of AI writing i humanizera Bladera. Są s
 
 **Przed:** Świątynia łączy paletę niebieskiego, zielonego i złotego, rezonując z naturalnym pięknem regionu i odzwierciedlając głęboką więź społeczności z ziemią.
 
-**Po:** Świątynię pomalowano na niebiesko, zielono i złoto. Architekt wyjaśnił, że nawiązuje to do lokalnej fauny i kolorów wybrzeża.
+**Po:** Świątynia jest pomalowana na niebiesko, zielono i złoto.
+
+*Związek z regionem to interpretacja bez źródła; nie wymyślasz, kto ją wygłosił.*
 
 ### 4. Promocyjny ton, język folderu turystycznego
 
@@ -200,7 +206,7 @@ Te wzorce pochodzą z Wikipedia: Signs of AI writing i humanizera Bladera. Są s
 
 **Przed:** Wpisany w samo serce zachwycającego regionu Małopolski, Tarnów stanowi tętniące życiem miasto o bogatym dziedzictwie kulturowym i niepowtarzalnym uroku.
 
-**Po:** Tarnów jest miastem powiatowym w Małopolsce, znanym z renesansowej zabudowy starówki i corocznych festiwali sztuki.
+**Po:** Tarnów jest miastem w Małopolsce. [konkret: czym się wyróżnia?]
 
 ### 5. Niejasne atrybucje, "weasel words"
 
@@ -208,7 +214,9 @@ Te wzorce pochodzą z Wikipedia: Signs of AI writing i humanizera Bladera. Są s
 
 **Przed:** Eksperci uważają, że rzeka odgrywa kluczową rolę w lokalnym ekosystemie.
 
-**Po:** Rzeka stanowi siedlisko trzech gatunków endemicznych ryb — wynika z badań Instytutu Rybactwa Śródlądowego z 2019 roku.
+**Po:** Według [konkret: kogo? źródło] rzeka jest ważna dla lokalnego ekosystemu.
+
+*Nie wymyślasz instytucji, badań ani liczby gatunków.*
 
 ### 6. Formuliczne sekcje "Wyzwania i perspektywy"
 
@@ -216,7 +224,9 @@ Te wzorce pochodzą z Wikipedia: Signs of AI writing i humanizera Bladera. Są s
 
 **Przed:** Pomimo prosperity przemysłowej, miasto stoi przed wyzwaniami typowymi dla obszarów miejskich, w tym korkami i niedoborem wody. Dzięki strategicznej lokalizacji i bieżącym inicjatywom miasto wciąż się rozwija.
 
-**Po:** Korki nasiliły się po 2015 roku, gdy uruchomiono trzy parki technologiczne. Gmina rozpoczęła w 2022 roku budowę systemu odwodnień, by ograniczyć powtarzające się podtopienia.
+**Po:** Miasto ma problem z korkami i niedoborem wody.
+
+*Optymistycznego zakończenia nie zastępujesz wymyślonymi datami ani inwestycjami.*
 
 ### 7. Słownictwo-wytrych typowe dla AI
 
@@ -230,7 +240,9 @@ Te wzorce pochodzą z Wikipedia: Signs of AI writing i humanizera Bladera. Są s
 
 **Przed:** Galeria pełni funkcję przestrzeni wystawienniczej dla sztuki współczesnej. Galeria oferuje cztery osobne sale i dysponuje powierzchnią ponad 300 m².
 
-**Po:** Galeria jest przestrzenią wystawienniczą dla sztuki współczesnej. Ma cztery sale o łącznej powierzchni 300 m².
+**Po:** Galeria jest przestrzenią wystawienniczą dla sztuki współczesnej. Ma cztery osobne sale i ponad 300 m² powierzchni.
+
+*Kwantyfikator „ponad” zostaje.*
 
 ### 9. Paralelizmy negatywne i końcowe negacje
 
@@ -238,7 +250,9 @@ Te wzorce pochodzą z Wikipedia: Signs of AI writing i humanizera Bladera. Są s
 
 **Przed:** To nie tylko produkt, to filozofia życia. To nie zmiana — to rewolucja.
 
-**Po:** Produkt sprzedawany jest jako element konkretnej filozofii życia. Stanowi istotną zmianę w stosunku do poprzedniej generacji.
+**Po:** Produkt przedstawiany jest jako filozofia życia. [konkret: na czym polega zmiana?]
+
+*Nie dopisujesz, czym produkt różni się od poprzednika, i nie wstawiasz słów z list tego skilla (wzorce 1, 7, 8). Brakujący konkret zostaje luką.*
 
 ### 10. Reguła trzech
 
@@ -246,7 +260,9 @@ Te wzorce pochodzą z Wikipedia: Signs of AI writing i humanizera Bladera. Są s
 
 **Przed:** Wydarzenie obejmuje wystąpienia, panele dyskusyjne i okazje do networkingu. Uczestnicy mogą oczekiwać innowacji, inspiracji i branżowych wniosków.
 
-**Po:** Wydarzenie składa się z prelekcji i paneli. Między sesjami zaplanowano czas na nieformalne rozmowy.
+**Po:** Wydarzenie obejmuje wystąpienia, panele dyskusyjne i okazje do networkingu.
+
+*Zdanie o „innowacjach, inspiracjach i wnioskach” wypada, bo nic nie mówi. Pierwsza trójka zostaje, bo wylicza realne elementy.*
 
 ### 11. Cykliczne synonimy (elegant variation)
 
@@ -254,13 +270,15 @@ Te wzorce pochodzą z Wikipedia: Signs of AI writing i humanizera Bladera. Są s
 
 **Po:** Protagonista mierzy się z wyzwaniami, lecz ostatecznie triumfuje i wraca do domu.
 
+**Ostrożnie:** polska szkoła uczy unikać powtórzeń, więc wymiana synonimów jest też nawykiem ludzi. Wikipedia zalicza ten wzorzec do historycznych. Sam w sobie to słaby sygnał.
+
 ### 12. Fałszywe zakresy
 
 **Problem:** Konstrukcje *"od X do Y"*, gdzie X i Y nie tworzą sensownej skali.
 
 **Przed:** Nasza podróż przez wszechświat prowadzi od osobliwości Wielkiego Wybuchu po kosmiczną sieć, od narodzin i śmierci gwiazd po tajemniczy taniec ciemnej materii.
 
-**Po:** Książka omawia Wielki Wybuch, powstawanie gwiazd i aktualne teorie ciemnej materii.
+**Po:** Omawiamy osobliwość Wielkiego Wybuchu, kosmiczną sieć, narodziny i śmierć gwiazd oraz ciemną materię.
 
 ### 13. Strona bierna i bezpodmiotowe równoważniki zdań
 
@@ -309,7 +327,9 @@ Te wzorce pochodzą z Wikipedia: Signs of AI writing i humanizera Bladera. Są s
 
 **Przed:** Łączy **OKR** (Objectives and Key Results), **KPI** (Key Performance Indicators) oraz narzędzia wizualne, takie jak **Business Model Canvas (BMC)**.
 
-**Po:** Łączy OKR-y, KPI i narzędzia wizualne w rodzaju Business Model Canvas.
+**Po:** Łączy OKR (Objectives and Key Results), KPI (Key Performance Indicators) oraz narzędzia wizualne, takie jak Business Model Canvas (BMC).
+
+*Zmiana: tylko zdjęte pogrubienia.*
 
 ### 16. Listy z nagłówkami inline
 
@@ -350,7 +370,7 @@ Krytyczny problem polskiej typografii — patrz sekcja TYPOGRAFIA.
 - *"W celu osiągnięcia tego celu"* → *"Aby to osiągnąć"*
 - *"Z uwagi na fakt, że padało"* → *"Ponieważ padało"*
 - *"W obecnej chwili"* → *"Teraz"*
-- *"W przypadku, gdyby potrzebował Pan pomocy"* → *"Jeżeli potrzebujesz pomocy"*
+- *"W przypadku, gdyby potrzebował Pan pomocy"* → *"Jeśli będzie Pan potrzebował pomocy"* (forma grzecznościowa zostaje)
 - *"System posiada zdolność przetwarzania"* → *"System przetwarza"*
 - *"Warto wspomnieć, że dane pokazują"* → *"Dane pokazują"*
 
@@ -364,19 +384,23 @@ Krytyczny problem polskiej typografii — patrz sekcja TYPOGRAFIA.
 
 **Przed:** Przyszłość rysuje się obiecująco. Przed nami pasjonujące czasy w drodze ku doskonałości. To krok w dobrym kierunku.
 
-**Po:** Firma planuje otwarcie dwóch nowych oddziałów w przyszłym roku.
+**Po:** *(zdania usunięte)*
+
+*Generyczne zakończenie skreślasz. Jeśli tekst ma konkretny plan, kończy się nim; nie wymyślasz planu.*
 
 ### 26. Manieryczne pary z łącznikiem
 
 **Słowa-wskaźniki:** *cross-funkcyjny, klient-centryczny, oparty-na-danych, najwyższej-jakości, w-czasie-rzeczywistym, długoterminowy* — mechaniczna konsekwencja w łącznikach (lub ich brak w słowach, które po polsku piszemy razem).
 
-### 27. Tropy "prawdziwej autorytetu"
+### 27. Tropy „prawdziwego autorytetu”
 
 **Słowa-wskaźniki:** *W gruncie rzeczy, w rzeczywistości, fundamentalnie, sednem sprawy jest, prawdziwym pytaniem jest, na poziomie głębszym, esencją tego jest*
 
 **Przed:** Prawdziwym pytaniem jest, czy zespoły potrafią się dostosować. Sednem sprawy jest gotowość organizacyjna.
 
-**Po:** Pytanie brzmi: czy zespoły potrafią się dostosować. To zależy głównie od tego, czy organizacja chce zmienić nawyki.
+**Po:** Pytanie brzmi: czy zespoły potrafią się dostosować. To kwestia gotowości organizacji.
+
+*Nie dopisujesz, od czego ta gotowość zależy.*
 
 ### 28. Sygnalizowanie zamiast działania
 
@@ -384,7 +408,9 @@ Krytyczny problem polskiej typografii — patrz sekcja TYPOGRAFIA.
 
 **Przed:** Zanurkujmy w temat keszowania w Next.js. Oto, co warto wiedzieć.
 
-**Po:** Next.js keszuje dane na kilku warstwach: memoizacja zapytań, cache danych, cache routera.
+**Po:** O keszowaniu w Next.js. [konkret: co autor chce powiedzieć?]
+
+*Zapowiedź skreślasz; nie dopisujesz warstw cache, o których wejście nie mówi.*
 
 ### 29. Fragmentaryczne nagłówki
 
@@ -405,7 +431,7 @@ Gdy użytkownik trafia na wolną stronę, odchodzi.
 
 To są wzorce, których NIE ma w anglojęzycznym katalogu. Wynikają z tego, że LLM-y trenowane są głównie na angielskim, a polski tłumaczą "z głowy". Wyłapuj je z najwyższą wrażliwością — w polskim tekście są często bardziej diagnostyczne niż wzorce z części A.
 
-### 30. Kalki składniowe z angielskiego (CRITICAL)
+### 30. Kalki składniowe z angielskiego
 
 Model często myśli po angielsku i przekłada konstrukcję 1:1. Wyłapuj te kalki:
 
@@ -417,7 +443,6 @@ Model często myśli po angielsku i przekłada konstrukcję 1:1. Wyłapuj te kal
 | być w stanie zrobić | *to be able to* | móc zrobić |
 | ma to sens | *makes sense* | to logiczne, to ma rację bytu |
 | na końcu dnia | *at the end of the day* | ostatecznie, koniec końców |
-| wywierać wpływ | *to have impact* | wpływać, mieć wpływ |
 | wspierać rozwój | *to support* | przyczyniać się do rozwoju, sprzyjać |
 | w kontekście X | *in the context of* | jeśli chodzi o X, w odniesieniu do X |
 | na poziomie X | *at the level of* | w wymiarze X, w zakresie X |
@@ -560,6 +585,48 @@ W polskim widać to jaskrawiej niż w angielskim — bo polski rynek/prawo/kultu
 - nadgorliwe streszczanie — AI domyka każdą myśl, nawet jeśli akapit jest jasny
 
 **Uwaga przed nadmiernym fałszywym alarmem:** idealna polska interpunkcja może świadczyć o dobrej redakcji, niekoniecznie AI. Patrz: część A, zasada "patterns are signs of a problem, not the problem itself".
+
+---
+
+## CZĘŚĆ C. NOWSZE WZORCE (2026)
+
+Opisane w Wikipedii „Signs of AI writing” (stan na listopad 2026) na materiale anglojęzycznym. Polskie odpowiedniki to tłumaczenia, nie wynik pomiaru na polskim korpusie. Każdy to słaby sygnał, który liczy się tylko z innymi (ZASADY NADRZĘDNE, pkt 3).
+
+### 36. Korekty ramowe („należy traktować jako X, a nie Y”)
+
+Od około połowy 2026 (Wikipedia wiąże to z modelami wydanymi od lipca 2026). Model dopisuje zastrzeżenie, jak „należy rozumieć” źródło albo fakt.
+
+**Słowa-wskaźniki:** *należy traktować jako…, a nie jako…*, *nie przesądza o*, *nie dowodzi, że*, *samo w sobie nie oznacza*, *nie należy mylić z*
+
+**Przed:** Kronika wspomina o oblężeniu. Zapis ten należy traktować jako przekaz tradycji, a nie jako potwierdzony fakt historyczny.
+
+**Po:** Kronika wspomina o oblężeniu. Zapis ten należy traktować jako przekaz tradycji, a nie jako potwierdzony fakt historyczny.
+
+*Zastrzeżenie zostaje w tekście: to też twierdzenie, a jego usunięcie zmienia sens. W raporcie: „korekta ramowa (§36), sprawdź, czy masz na nią źródło”.*
+
+### 37. Mgliste powiązania („związany z”, „kojarzony z”)
+
+Zamiast powiedzieć, jaka to relacja, model pisze, że coś jest z czymś *związane*.
+
+**Słowa-wskaźniki:** *związany z*, *kojarzony z*, *w powiązaniu z*, *w związku z* (gdy nie oznacza przyczyny), *łączony z*
+
+**Przed:** W latach 2015–2018 Kowalski był związany z kierownictwem spółki.
+
+**Po:** W latach 2015–2018 Kowalski był [konkret: jaka funkcja?] spółki.
+
+*Jeśli funkcja pada gdzie indziej w tekście, wstaw ją. Jeśli nie, zostaje luka. Nie zgadujesz.*
+
+### 38. Nadmierne powoływanie się na same źródła
+
+Tekst opowiada, gdzie coś odnotowano, zamiast powiedzieć, co odnotowano.
+
+**Słowa-wskaźniki:** *odnotowany w*, *wzmiankowany w*, *udokumentowany w*, *był przedmiotem relacji*, *szeroko opisywany w mediach regionalnych i branżowych*
+
+**Przed:** Zespół był wielokrotnie opisywany w mediach regionalnych i branżowych, co potwierdza jego rozpoznawalność.
+
+**Po:** Zespół był wielokrotnie opisywany w mediach regionalnych i branżowych.
+
+*Dopowiedzenie o rozpoznawalności wypada. Jeśli autor ma konkretne publikacje, niech je wymieni.*
 
 ---
 
@@ -743,70 +810,86 @@ Gdy w tekście jest tylko jeden rodzaj sygnału (ZASADY NADRZĘDNE, pkt 3): punk
 
 ### Rozpoznany gatunek:
 
-**Blog / publicystyka branżowa o AI w pracy programisty.** Sygnały: ton ogólnoperswazyjny, hasła marketingowe („propozycja wartości", „odblokowanie kreatywności"), brak cytowań i odniesień regulacyjnych, lista bullet-pointów z emoji, formuły otwierające i zamykające typowe dla content marketingu. Pozwala na luźniejszy rejestr, 1. osobę i dodanie głosu autorskiego.
+**Blog / publicystyka branżowa o AI w cyberbezpieczeństwie.** Sygnały: ton ogólnoperswazyjny, hasła marketingowe („propozycja wartości”, „odblokowanie kreatywności”), brak cytowań i odniesień regulacyjnych, lista bullet-pointów z emoji, formuły otwierające i zamykające typowe dla content marketingu. Pozwala na luźniejszy rejestr. Głos autorski tylko taki, jaki jest w wejściu; tu go nie ma.
+
+### Ostrzeżenia:
+
+- Instrukcje dla modelu w tekście: brak
+- Luki do uzupełnienia przez autora: `[konkret: co dokładnie usprawniają w procesach i współpracy?]`, `[konkret: kogo?]` (atrybucja „obserwatorzy branżowi”)
 
 ### Pierwsza redakcja:
 
-> Asystenci AI mogą przyspieszyć niektóre części pracy. Najlepiej radzą sobie z boilerplate'em: pliki konfiguracyjne, szkielety testów, powtarzalne refaktoryzacje. Słabiej — z rozumieniem, kiedy się mylą. Zdarzyło mi się zaakceptować podpowiedzi, które się skompilowały, przeszły lint i wciąż robiły coś innego, niż chciałem, bo przestałem patrzeć.
+> Duże modele językowe zmieniają pracę specjalistów od cyberbezpieczeństwa: pomagają im identyfikować, analizować i mitygować zagrożenia. Usprawniają procesy, współpracę i spójność. Potrafią generować dokumentację i testy oraz refaktoryzować kod, a kod generują znacząco szybciej.
 >
-> Programiści, z którymi rozmawiam, dzielą się na dwa obozy. Jedni używają tego jak autouzupełniania do nudnych fragmentów i przeglądają każdą linię. Drudzy wyłączają, gdy narzędzie zaczyna podpowiadać wzorce ze starych, wewnętrznych bibliotek. Obie postawy są rozsądne.
+> Według obserwatorów branżowych adopcja przyspieszyła od hobbystycznych eksperymentów do firmowych wdrożeń. Technologię prezentowano w „Rzeczpospolitej”, „Pulsie Biznesu” i „Computerworldzie”. Jakość outputu poprawiła się dzięki ulepszonemu trenowaniu.
 >
-> Metryki wydajności są śliskie. GitHub może mówić, że użytkownicy Copilota „akceptują 30% sugestii", ale akceptacja to nie poprawność, a poprawność to nie wartość. Bez testów po prostu zgadujesz.
+> Wyzwania pozostają: halucynacje, biasy i kwestie odpowiedzialności. Szczegółowych informacji jest niewiele. Zespoły muszą dostosować się do najlepszych praktyk.
 
-### Audyt AI: „Co jeszcze zdradza AI?"
+### Audyt AI: „Co jeszcze zdradza AI?”
 
-- Rytm trochę za równy — krótkie i średnie zdania, brak prawdziwego „uderzenia"
-- „Obie postawy są rozsądne" pachnie miłą, sztampową puentą
-- Brak własnego, osobistego głosu — żadnej anegdoty z prawdziwego życia, żadnej krawędzi
-- Sprawdziłem gęstość myślników (wzorzec 14) — w pierwszej redakcji są dwa, oba w funkcji retorycznej pauzy, nie składniowej. Bezpiecznie
+- Dwie trójki z rzędu (identyfikować, analizować i mitygować; procesy, współpraca i spójność) — wzorzec 10. Pierwsza wylicza realne czynności i zostaje. Druga nic konkretnego nie mówi, a konkretu nie ma w wejściu, więc zostaje luka do uzupełnienia przez autora
+- Kalki „mitygować”, „output”, „biasy” — wzorzec 30. „Mitygować” i „biasy” to zarazem żargon branżowy, więc zamiana idzie do audytu semantycznego z ⚠️
+- „Według obserwatorów branżowych” to niejasna atrybucja (wzorzec 5). Źródła nie ma w wejściu, więc atrybucja zostaje z luką `[konkret: kogo?]`
+- „Adopcja przyspieszyła od… do…” to wciąż fałszywy zakres (wzorzec 12), ale niesie twierdzenie o adopcji, więc zostaje w prostszej formie
+- „Szczegółowych informacji jest niewiele” to resztka zastrzeżenia chatbota (wzorzec 21). W głosie autora stałoby się twierdzeniem o stanie wiedzy, którego autor nie wygłosił, więc wypada
+- „Wyzwania pozostają:” to resztka formuły z wzorca 6
+- Brak osobistego głosu: to tylko uwaga, nie dopisuję anegdot ani opinii (ZASADY NADRZĘDNE, pkt 2)
 
 ### Druga redakcja:
 
-> AI do kodu przyspiesza nudne kawałki. Nic więcej. I dobrze.
+> Duże modele językowe zmieniają pracę specjalistów od cyberbezpieczeństwa. Pomagają identyfikować, analizować i ograniczać zagrożenia. Piszą dokumentację i testy oraz refaktoryzują kod. Sam kod generują znacznie szybciej. [konkret: co dokładnie usprawniają w procesach i współpracy?]
 >
-> Najlepiej idą jej szkielety: configi, testy, powtarzalne refaktoringi. Najgorzej — wiedza, kiedy się myli. Sam mam na sumieniu poprawki, które skompilowały się, przeszły lint i ciągle robiły nie to, co miały. Przestałem patrzeć — i wiadomo, jak to się skończyło.
+> Według obserwatorów branżowych [konkret: kogo?] używają ich hobbyści, a coraz częściej także firmy. Pisano o nich w „Rzeczpospolitej”, „Pulsie Biznesu” i „Computerworldzie”. Jakość odpowiedzi poprawiło lepsze trenowanie modeli.
 >
-> Ludzie, których pytam, dzielą się na dwa typy. Jedni traktują to jak autouzupełnianie i czytają każdą linię. Drudzy wyłączyli po dwóch tygodniach, bo Copilot uparcie podpowiadał wzorce z bibliotek, których u nich nikt już nie używa.
->
-> Metryki? Każdy podaje swoje. GitHub mówi o „30% akceptacji". OK, ale akceptacja to nie poprawność, a poprawność to nie wartość. Jak nie masz testów — zgadujesz.
+> Problemy zostały: halucynacje, stronniczość i kwestie odpowiedzialności. Zespoły muszą dostosować się do najlepszych praktyk.
 
 ### Audyt semantyczny:
 
 | # | Oryginał (twierdzenie/fragment) | Po redakcji | Status |
 |---|---|---|---|
-| 1 | „AI w cyberbezpieczeństwie / asystenci AI" — przedmiot | „AI do kodu / asystenci AI" | ⚠️ — oryginał był nominalnie o „AI w cyberbezpieczeństwie", redakcja zawęża do „AI do kodu". Oryginał jednak w całości opisywał generowanie kodu, refaktoryzację, dokumentację — więc redakcja precyzyjniej oddaje rzeczywistą treść |
-| 2 | „adopcja przyspieszyła od hobbystycznych eksperymentów do firmowych wdrożeń" | (pominięte) | ⚠️ — usunięto, bo to fałszywy zakres-AI; redakcja zachowuje fakt różnicowania użytkowników w innej formie |
-| 3 | „GitHub… 30%" (akceptacja sugestii Copilota) | „GitHub mówi o «30% akceptacji»" | ✅ — fakt zachowany, modalność „mówi" oddaje wątpliwość źródła |
-| 4 | „akceptacja to nie poprawność, a poprawność to nie wartość" | „akceptacja to nie poprawność, a poprawność to nie wartość" | ✅ — twierdzenie kluczowe (logiczne rozróżnienie) zachowane dosłownie |
-| 5 | „halucynacje, biasy, kwestie odpowiedzialności" — wyliczenie problemów | (pominięte) | ⚠️ — wyliczenie generyczne, usunięte jako AI-slop; jeśli oryginał miał na celu konkretną listę wyzwań, redakcja gubi tę informację. Tu redakcja zachowała ogólny ton ostrożności bez konkretów |
+| 1 | przedmiot: AI w cyberbezpieczeństwie | „pracę specjalistów od cyberbezpieczeństwa” | ✅ — przedmiot zachowany |
+| 2 | identyfikują, analizują i mitygują zagrożenia | „identyfikować, analizować i ograniczać zagrożenia” | ⚠️ — „identyfikować” zostaje (termin fachowy); „mitygować” → „ograniczać” oddaje sens, ale to żargon branżowy, autor może woleć oryginał |
+| 3 | usprawnianie procesów, wzmacnianie współpracy, pielęgnowanie spójności | luka `[konkret: …?]` | ⚠️ — ogólnik bez treści; nie zastąpiono go wymyślonym konkretem, autor dostaje pytanie |
+| 4 | „To nie tylko autocomplete; to odblokowanie kreatywności na skalę przemysłową…” | (usunięte) | ⚠️ — paralelizm negatywny i hasła bez treści (wzorce 9, 4) usunięte razem z „nie tylko” |
+| 5 | generowanie dokumentacji, testów i refaktoryzacji „pokazuje, jak AI może przyczyniać się do lepszych rezultatów”; szybsze generowanie kodu | „Piszą dokumentację i testy oraz refaktoryzują kod. Sam kod generują znacznie szybciej” | ⚠️ — czynności zachowane; pusty komentarz z „może przyczyniać się” usunięty (wzorzec 3) |
+| 6 | obserwatorzy branżowi: adopcja od hobbystycznych eksperymentów do firmowych wdrożeń, od solo developerów po zespoły | „Według obserwatorów branżowych [konkret: kogo?] używają ich hobbyści, a coraz częściej także firmy” | ⚠️ — atrybucja zachowana z luką; dwa zakresy połączone w jedno zdanie, rozróżnienie solo/zespoły przepadło |
+| 7 | prezentacja w trzech tytułach prasowych | te same trzy tytuły | ✅ |
+| 8 | jakość poprawiona przez ulepszone trenowanie | „Jakość odpowiedzi poprawiło lepsze trenowanie modeli” | ✅ |
+| 9 | wyzwania: halucynacje, biasy, kwestie odpowiedzialności | „halucynacje, stronniczość i kwestie odpowiedzialności” | ⚠️ — „biasy” → „stronniczość” oddaje sens, ale to żargon branżowy, autor może woleć oryginał |
+| 10 | „szczegółowe informacje są ograniczone”; narzędzia „mogłyby mieć pewien pozytywny wpływ” (z „potencjalnie”) | (usunięte) | ⚠️ — zastrzeżenie chatbota o źródłach (wzorzec 21) i ostrożna ocena wpływu (wzorzec 24) usunięte; jeśli autor chce ocenić wpływ, musi to zrobić sam |
+| 11 | „ekosystem nadal się rozwija” | (usunięte) | ⚠️ — optymistyczna klamra formuły „Pomimo wyzwań…” (wzorzec 6) usunięta |
+| 12 | zespoły muszą dostosować się do najlepszych praktyk | „Zespoły muszą dostosować się do najlepszych praktyk” | ✅ — sformułowanie zachowane |
+| — | (kierunek wynik → wejście) | brak nowych liczb, nazw, źródeł, przeżyć i opinii | ✅ |
 
-**Werdykt:** Audyt semantyczny: ZGODNE Z ZASTRZEŻENIAMI. Brak twierdzeń krytycznych (terminologii fachowej, danych liczbowych poza „30%", odniesień regulacyjnych). Gatunek (blog/publicystyka) toleruje skrót i zawężenie tematu, więc redakcja jest akceptowalna. W tekście akademickim ta sama strategia byłaby niedopuszczalna.
+**Werdykt:** Audyt semantyczny: ZGODNE Z ZASTRZEŻENIAMI (pozycje 2–6 i 9–11: świadome skreślenia, zamiany żargonu i luki dla autora). Nic nie zostało dopisane. Dwie luki czekają na autora.
 
 ### Finalna wersja:
 
-= Druga redakcja (audyt semantyczny bez zastrzeżeń krytycznych).
+= Druga redakcja (zastrzeżenia z audytu to świadome skreślenia i luki dla autora, bez ❌).
 
 ### Wykaz zmian:
 
-- Rozpoznany gatunek: blog/publicystyka — toleruje 1. osobę, anegdotę, zawężenie tematu
-- Usunięto artefakty czatu („Świetne pytanie!", „Mam nadzieję, że to pomogło", „Daj znać...") — wzorzec 20
-- Usunięto pompowanie znaczenia („kluczowy moment w ewolucji", „stanowi świadectwo", „wpisane w samo serce") — wzorce 1, 4
-- Usunięto kalkę „enduring" (pozostawione angielskie słowo!), „cross-funkcyjny", „solo developerów", „doświadczenia użytkownikom" — wzorzec 30
-- Usunięto kalki „stanowi fundament", „pełni funkcję katalizatora", „służy jako partner" → zwykłe „jest"/„to" — wzorzec 8
-- Usunięto regułę trzech („usprawnianie, wzmacnianie, pielęgnowanie") — wzorzec 10
-- Usunięto negatywne paralelizmy („to nie tylko X, to Y") — wzorzec 9
-- Usunięto fałszywe zakresy („od X do Y, od A do B") — wzorzec 12
-- Usunięto em-dashe bez spacji (—nestled—) → półpauzy ze spacjami albo zwykłe przecinki — wzorzec 32
+- Rozpoznany gatunek: blog/publicystyka — toleruje luźniejszy rejestr
+- Usunięto artefakty czatu („Świetne pytanie!”, „Mam nadzieję, że to pomoże!”, „Daj znać...”) — wzorzec 20
+- Usunięto pompowanie znaczenia („kluczowy moment w ewolucji”, „stanowi świadectwo”, „wpisane w samo serce”) — wzorce 1, 4
+- Usunięto kalkę „enduring” (pozostawione angielskie słowo!), „cross-funkcyjny”, „solo developerów”, „doświadczenia użytkownikom”; „mitygować” → „ograniczać”, „biasy” → „stronniczość”, „output” → „odpowiedzi” (z ⚠️ w audycie) — wzorzec 30
+- Usunięto kalki „stanowi fundament”, „pełni funkcję katalizatora”, „służy jako partner” — wzorzec 8
+- Ogólnik „usprawnianie, wzmacnianie, pielęgnowanie” (reguła trzech) oznaczono jako lukę, bez wymyślonego konkretu — wzorzec 10
+- Usunięto negatywne paralelizmy („to nie tylko X, to Y”) — wzorzec 9
+- Fałszywe zakresy („od X do Y, od A do B”) zamienione na proste zdanie o adopcji; atrybucja „obserwatorzy branżowi” zostaje z luką `[konkret: kogo?]` — wzorce 12, 5
+- Em-dashe bez spacji z wejścia zniknęły razem z przepisanymi zdaniami, w których stały (wtrącenie „wpisane w samo serce” i wyliczenie wyzwań) — wzorce 14, 32
 - Usunięto emoji, pogrubienia w listach, listę inline-headerową — wzorce 15, 16, 18
-- Usunięto polski GPT-izm „W dzisiejszym dynamicznym świecie" — wzorzec 31
-- Usunięto formuliczne „Pomimo wyzwań... rozwija się" — wzorzec 6
-- Usunięto cutoff-disclaimer „szczegółowe informacje są ograniczone" — wzorzec 21
-- Usunięto nadmierne hedging „można potencjalnie argumentować, że mogłyby mieć pewien wpływ" — wzorzec 24
-- Usunięto frazy-wypełniacze („W celu osiągnięcia", „W oparciu o") — wzorzec 23
-- Usunięto generyczne pozytywne zakończenie „Przyszłość rysuje się obiecująco" — wzorzec 25
-- Usunięto „Podsumowując" — wzorzec 31 (typowy polski GPT-izm zakończeń)
-- Dodano osobisty głos (1. osoba, anegdota, lekka krawędź) — sekcja GŁOS I DUSZA (dopuszczalne dla rozpoznanego gatunku)
-- Zróżnicowano rytm: krótkie zdania uderzeniowe po dłuższych
+- Usunięto polski GPT-izm „W dzisiejszym dynamicznym świecie” — wzorzec 31
+- Usunięto formuliczne „Pomimo wyzwań... rozwija się” — wzorzec 6
+- Usunięto cutoff-disclaimer „szczegółowe informacje są ograniczone” — wzorzec 21
+- Usunięto nadmierne hedging „można potencjalnie argumentować, że mogłyby mieć pewien wpływ” — wzorzec 24
+- Usunięto frazy-wypełniacze („W celu pełnego zrealizowania”, „W oparciu o”) — wzorzec 23
+- Usunięto generyczne pozytywne zakończenie „Przyszłość rysuje się obiecująco” — wzorzec 25
+- Usunięto „Podsumowując” — wzorzec 31 (typowy polski GPT-izm zakończeń)
+- Tytuły prasowe w polskich cudzysłowach (wejście miało proste ASCII) — wzorce 19, 32
+- Nie dodano głosu, anegdot ani opinii; ogólnik oznaczono jako lukę (ZASADY NADRZĘDNE, pkt 2)
+- Żadnego myślnika nie zamieniono na przecinek
+- Zróżnicowano długość zdań
 
 > **Uwaga:** dla tekstu akademickiego (praca naukowa, thesis, artykuł recenzowany) ta sama redakcja byłaby zbyt agresywna — patrz przykład w sekcji AUDYT SEMANTYCZNY, gdzie zmiana „organizacja powinna rozpocząć migrację" na „organizacje powinny migrować" została oznaczona jako ❌, mimo że stylistycznie jest gładsza.
 
