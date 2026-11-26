@@ -286,21 +286,13 @@ Te wzorce pochodzą z Wikipedia: Signs of AI writing i humanizera Bladera. Są s
 
 **Po:** Nie musisz tworzyć pliku konfiguracyjnego. Program zapisuje wyniki sam.
 
-### 14. Nadużywanie myślnika jako łącznika składniowego (CRITICAL)
+### 14. Myślnik: typografia, nie sygnał
 
-**Problem:** Myślnik jest jednym z najsilniejszych pojedynczych sygnałów tekstu generowanego przez AI — i to nie tylko ze względu na typografię (em-dash bez spacji w angielskim stylu — patrz sekcja 32), ale **przede wszystkim z powodu funkcji składniowej**. LLM-y nagminnie łączą zdania myślnikami tam, gdzie ludzki autor postawiłby spójnik, przecinek, dwukropek albo zwykłą kropkę. **W polskim ten wzorzec jest szczególnie nienaturalny**, bo polszczyzna dysponuje bogatym systemem spójników podrzędnych i zaimków względnych (*który, ponieważ, gdyż, bo, gdy, jeżeli, choć, mimo że, co, dlatego, więc, zatem, dzięki czemu*), które AI mechanicznie pomija na rzecz prostszej, "angielskiej" struktury z dwoma dashami.
+**Stan wiedzy (listopad 2026):** Wikipedia „Signs of AI writing” przeniosła nadużywanie em-dasha do wskaźników historycznych (2022 – wrzesień 2026) i zaleca brać je pod uwagę tylko razem z innymi wskaźnikami. Na polskim zbiorze Śmigiel (IPI PAN; modele open-weights, bez ChatGPT i Claude'a) ludzie używają myślników częściej niż modele: powyżej 5 myślników na 100 słów ma 3,5% tekstów ludzkich i 1,1% maszynowych. Para myślników przy wtrąceniu to w polszczyźnie norma: według zasad PWN ([365] 90.2) myślniki oznaczają wydzielenie mocniejsze niż przecinki. **Dlatego w tym skillu ani liczba myślników, ani ich łańcuchy nie liczą się jako sygnał AI.**
 
-**Symptomy diagnostyczne:**
+**Domyślnie:** myślniki zostawiasz. Poprawiasz tylko znak (sekcja 32).
 
-- **Łańcuchy myślników** (3+ myślników na akapit, czasem 2-3 w jednym zdaniu) — najmocniejszy sygnał.
-- **Podwójny myślnik w roli nawiasu wtrąconego**, gdzie naturalniej zadziałałyby przecinki albo nawiasy: *"System — kluczowy element architektury — zbiera logi"*.
-- **Myślnik zamiast spójnika podrzędnego** — to esencja problemu w polskim:
-  - *"Wdrożyliśmy nowe API — to zmniejszyło latencję"* → *"Wdrożyliśmy nowe API, **co** zmniejszyło latencję"*
-  - *"Testy nie przeszły — kod miał błąd"* → *"Testy nie przeszły, **bo** kod miał błąd"*
-  - *"Zastosowano nową metodę — autorzy chcieli zweryfikować hipotezę"* → *"Zastosowano nową metodę, **ponieważ** autorzy chcieli zweryfikować hipotezę"*
-  - *"Regulacja weszła w życie w 2025 — wymaga od banków wdrożenia PQC"* → *"Regulacja, **która** weszła w życie w 2025, wymaga od banków wdrożenia PQC"*
-- **Myślnik zamiast dwukropka** (przed wyliczeniem albo wyjaśnieniem): *"Rozwiązanie jest proste — wystarczy zmienić konfigurację"* → *"Rozwiązanie jest proste: wystarczy zmienić konfigurację"*.
-- **Myślnik zamiast kropki** (gdy dwa zdania są tylko luźno powiązane): *"Aplikacja działa szybko — interfejs jest intuicyjny"* → *"Aplikacja działa szybko. Interfejs jest intuicyjny"*.
+**Kiedy wolno zmienić myślnik:** tylko gdy zdanie przepisujesz z innego powodu (dwa sygnały z innych wzorców, ZASADY NADRZĘDNE pkt 3). Wtedy wybierasz znak według funkcji: dwukropek przed wyjaśnieniem lub wyliczeniem, kropka między luźno powiązanymi zdaniami, myślnik albo nawias przy wtrąceniu. Przecinek nie jest domyślnym zamiennikiem: osłabia wydzielenie wybrane przez autora, a w konstrukcjach typu „Wiedza – to potęga” jest błędem (PWN [402] 93.2).
 
 **Przed:**
 
@@ -308,20 +300,9 @@ Te wzorce pochodzą z Wikipedia: Signs of AI writing i humanizera Bladera. Są s
 
 **Po:**
 
-> System monitorujący jest kluczowym elementem architektury. Zbiera logi z każdej mikrousługi, dzięki czemu możemy szybko diagnozować problemy, zwłaszcza w godzinach szczytu, gdy ruch jest największy.
+> System monitorujący — ważny element architektury — zbiera logi z każdej mikrousługi. Pozwala to szybko diagnozować problemy — szczególnie w godzinach szczytu (gdy ruch jest największy).
 
-**Strategia redakcji "myślnikowej":**
-
-1. **Policz myślniki na 100 słów.** Powyżej 2-3 — sygnał alarmowy. Powyżej 5 — prawie pewnie AI. (W tekstach akademickich i regulacyjnych próg jest jeszcze niższy — tam myślnik retoryczny jest rzadkością.)
-2. **Dla każdego myślnika zapytaj: "co tu by zrobił ludzki autor?"** Przecinek? Dwukropek? Kropka? Spójnik? Wybierz najnaturalniejszą opcję dla polskiej składni.
-3. **Podwójne myślniki (wtrącenia)** — zamień na przecinki (najczęściej) albo nawiasy.
-4. **Myślnik łączący zdania** — najczęściej powinien być **spójnikiem podrzędnym** (*bo, ponieważ, dlatego, co, który, gdy, jeżeli, dzięki czemu*) albo dwoma osobnymi zdaniami.
-5. **Myślnik przed wyjaśnieniem/wyliczeniem** — zamień na dwukropek.
-6. **Zostaw myślnik tylko tam, gdzie naprawdę pełni rolę pauzy retorycznej** — i to półpauzą ze spacjami, nie em-dashem (patrz sekcja 32 TYPOGRAFIA dla poprawnego znaku).
-
-**Reguła kciuka:** *"Jeśli możesz zastąpić myślnik czymkolwiek innym bez utraty sensu — zastąp."* Dobry polski tekst używa myślnika oszczędnie, jako figury retorycznej, nie jako maszynowego łącznika składniowego. Polszczyzna ma bogaty system spójników — używajmy ich.
-
-**Pułapka redakcji:** zamiana myślnika na spójnik podrzędny zmienia rejestr (formalnie nieco bardziej "akademicki"). W tekstach swobodnych (esej, blog, mail) lepsza bywa kropka i dwa zdania niż natłok spójników. W tekstach akademickich i regulacyjnych — spójnik podrzędny jest właściwym wyborem, bo czyni relacje logiczne jawnymi.
+*Zdanie ma dwa sygnały spoza wzorca 14: słowo-wytrych „kluczowy” (wzorzec 7) i zdanie bez końca (wzorzec 35), więc wolno je przepisać. „Kluczowy” staje się „ważny”, jeden myślnik kropką, jeden nawiasem. Wtrącenie i dopowiedzenie zostają w myślnikach. Żaden myślnik nie staje się przecinkiem i nie ma dopisanej pierwszej osoby.*
 
 ### 15. Nadużywanie pogrubień
 
@@ -500,13 +481,13 @@ To są techniczne sygnały, których LLM-y trenowane na angielskim notorycznie n
 
 #### Cudzysłowy
 
-Polski cudzysłów drukarski: **„...”** (otwierający **na dole** ‚‚, zamykający **na górze** '').
+Polski cudzysłów drukarski: **„...”** (otwierający **na dole**: „ U+201E, zamykający **na górze**: ” U+201D).
 
 | AI często stawia | Powinno być |
 |-----------------|-------------|
-| `"projekt idzie dobrze"` (proste, klawiaturowe) | `„projekt idzie dobrze"` |
-| `"projekt idzie dobrze"` (curly amerykańskie, oba ogonki do góry) | `„projekt idzie dobrze"` |
-| `"projekt idzie dobrze."` (kropka **wewnątrz** cudzysłowu — po angielsku) | `„projekt idzie dobrze".` (kropka **poza** cudzysłowem, chyba że cytuje pełne zdanie) |
+| `"projekt idzie dobrze"` (proste, klawiaturowe) | `„projekt idzie dobrze”` |
+| `“projekt idzie dobrze”` (curly amerykańskie, oba ogonki do góry) | `„projekt idzie dobrze”` |
+| `"projekt idzie dobrze."` (kropka **wewnątrz** cudzysłowu — po angielsku) | `„projekt idzie dobrze”.` (kropka **poza** cudzysłowem, chyba że cytuje pełne zdanie) |
 
 **LaTeX:** używaj `csquotes` z opcją `polish` i `\enquote{}`, albo bezpośrednio sekwencji `,,...''` (dwa przecinki na dole otwierają, dwa apostrofy zamykają — efekt to „...").
 
@@ -528,15 +509,19 @@ Trzy różne znaki, trzy różne role:
 | *"2020—2024"* (em-dash w zakresie) | *"2020–2024"* (półpauza bez spacji w zakresie liczb) |
 | *"Polski-Niemcy"* (dywiz w zakresie) | *"Polska–Niemcy"* (półpauza) |
 
-**Reguła kciuka dla redakcji:** w polskim tekście prozą zastępuj wszystkie em-dashy (—) półpauzami (–) z obowiązkowymi spacjami z obu stron, ALBO przecinkami/nawiasami. Dywizy (–) zostają tylko w łączeniach słów (biało-czarny) i zakresach liczbowych (2020–2024) — bez spacji.
+**Reguła dla redakcji:** pauzę (—) ze spacjami w polskiej prozie zostaw albo, jeśli tekst konsekwentnie używa półpauzy, ujednolić na półpauzę ze spacjami (–). Pauzę lub półpauzę bez spacji między słowami popraw na wersję ze spacjami. **Nigdy nie zamieniaj myślnika na przecinek ani nawias tylko z powodu znaku** — to zmiana stylu, nie typografii. Dywiz (-) zostaje w łączeniach słów (biało-czarny), półpauza bez spacji w zakresach liczbowych (2020–2024).
 
-#### Inne polskie tellers AI (sygnalizowane przez NASK)
+#### Inne sygnały z artykułu Wirtualnemedia.pl (27.05.2025, częściowo za ekspertkami NASK)
+
+Artykuł (J. Dąbrowska-Cydzik) zastrzega, że to „nie twarde dowody […], a raczej wskazówki”. Każdy punkt to słaby sygnał, nigdy powód do redakcji w pojedynkę.
 
 - pusty znak (spacja) na początku akapitu
-- punktowanie zaczynające się od **wielkiej** litery po dwukropku (po polsku zwykle z małej, chyba że pełne zdania)
-- pauza/półpauza zastępująca przecinki niezgodnie z polską ortografią
+- punktowanie zaczynające się od **wielkiej** litery po dwukropku (po polsku zwykle z małej, chyba że pełne zdania) — wprost przypisane ekspertkom NASK
+- nadmiar słów zaczynających się wielką literą
+- pauza/półpauza zamiast przecinka — wprost przypisane ekspertkom NASK; artykuł dotyczy głównie postów w social mediach. Na zbiorze Śmigiel ludzie używają myślników częściej niż modele, więc nie zamieniaj myślników na przecinki z powodu tego punktu.
 - nadużycie emoji w listach biznesowych/akademickich (💡 🚀 ✅)
-- hashtagi w CamelCase: `#TworzenieTreściSEO` zamiast `#tworzenietresci_seo`
+
+Poza artykułem (obserwacja autora skilla, bez źródła): hashtagi w CamelCase, np. `#TworzenieTreściSEO`.
 
 ### 33. Błędy fleksyjne typowe dla modeli LLM w polskim
 
@@ -569,7 +554,7 @@ W polskim widać to jaskrawiej niż w angielskim — bo polski rynek/prawo/kultu
 
 **Sygnały:**
 - generyczne przykłady zamiast polskich (Sokrates zamiast Tischnera, MIT zamiast UW, Apple zamiast CDR)
-- pomylone polskie realia prawne — wymyślone artykuły, zmyślone wyroki, błędne rozwinięcia skrótowców (klasyk z NASK: *"PKP — Polska Kolej Prywatna"* zamiast *Polskie Koleje Państwowe*)
+- pomylone polskie realia prawne — wymyślone artykuły, zmyślone wyroki, błędne rozwinięcia skrótowców (przykład z artykułu Wirtualnemedia.pl, 2025: *„PKP — Polska Kolej Prywatna”* zamiast *Polskie Koleje Państwowe*)
 - nieznajomość polskiej terminologii branżowej (np. w obszarze cyberbezpieczeństwa: AI tłumaczy mechanicznie "TLPT" zamiast używać przyjętej polskiej terminologii regulacyjnej KNF/UKNF)
 - brak polskich idiomów, kolokwializmów, odniesień kulturowych
 - "halucynacje" w obszarach lokalnych są szczególnie częste — modele globalne są wyjątkowo słabe na polskim prawie, polskich wyrokach, polskiej historii regionalnej
@@ -900,7 +885,7 @@ Gdy w tekście jest tylko jeden rodzaj sygnału (ZASADY NADRZĘDNE, pkt 3): punk
 - [Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) — utrzymywany przez WikiProject AI Cleanup
 - [blader/humanizer](https://github.com/blader/humanizer) — oryginalny anglojęzyczny humanizer (MIT)
 - Rafał Mazur, *O poprawności językowej tekstów generowanych przez SI na przykładzie ChatuGPT*, "LingVaria", Wydział Polonistyki UJ
-- NASK — Ewelina Bartuzi-Trokielewicz, Aleksandra Krasnodębska, analizy tekstów AI w języku polskim
+- Wirtualnemedia.pl, J. Dąbrowska-Cydzik, „Widać to z daleka”. Oto, jak łatwo poznać, że tekst napisała sztuczna inteligencja, 27.05.2025, z wypowiedziami Eweliny Bartuzi-Trokielewicz i Aleksandry Krasnodębskiej (NASK) — https://www.wirtualnemedia.pl/po-czym-poznac-ze-tekst-napisala-sztuczna-inteligencja-poradnik-ai,7179298735470721a
 - Robert Chwałowski, *Typografia typowej książki* — kanoniczne źródło polskiej typografii
 - Poradnia Językowa PWN — sjp.pwn.pl/poradnia
 
