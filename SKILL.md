@@ -4,21 +4,17 @@ description: >
   Usuwa ślady tekstu generowanego przez AI/LLM z polskich tekstów, zachowując
   gatunek źródłowy (akademicki, list, dokumentacja) oraz sens merytoryczny
   (terminologia, definicje, dane, modalność, kwantyfikatory bez zmian).
-  Wykrywa kalki z angielskiego, polskie GPT-izmy, nadużywanie myślnika
-  jako łącznika składniowego (zdania podrzędne łączone dashami zamiast
-  spójnikami ponieważ/bo/który), błędy typograficzne (cudzysłowy, em-dash
-  vs półpauza), błędy fleksyjne oraz uniwersalne wzorce z Wikipedia
+  Wykrywa kalki z angielskiego, polskie GPT-izmy, błędy typograficzne
+  (cudzysłowy, em-dash vs półpauza), błędy fleksyjne oraz uniwersalne wzorce z Wikipedia
   "Signs of AI writing". Redakcja kończy się audytem semantycznym.
-  Aktywuj komendą /humanizer-pl. Używaj zawsze, gdy użytkownik wkleja
-  polski tekst do redakcji, mówi "zhumanizuj", "usuń AI", "popraw po AI",
-  "wygładź tekst", "brzmi jak ChatGPT", "za dużo myślników", "usuń dashy",
-  "em-dash overuse", albo pracuje nad polskim tekstem akademickim,
-  marketingowym, blogiem czy mailem, który mógł być wygenerowany przez LLM.
+  Aktywuj komendą /humanizer-pl. Używaj, gdy użytkownik wprost prosi
+  o redakcję albo ocenę polskiego tekstu pod kątem śladów AI: mówi
+  "zhumanizuj", "usuń AI", "popraw po AI", "brzmi jak ChatGPT",
+  "za dużo myślników", "sprawdź, czy to brzmi jak AI".
 license: MIT
 compatibility: claude-code opencode
-allowed-tools: Read, Write, Edit, Grep, Glob, AskUserQuestion
 metadata:
-  version: "1.2.0"
+  version: "1.3.0"
 ---
 
 # Humanizer-PL — Usuwanie wzorców AI z polskich tekstów
